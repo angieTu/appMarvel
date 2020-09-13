@@ -13,7 +13,7 @@ const CharactersProvider = ({ children }) => {
   useEffect(() => {
     const getCharacters = async () => {
       const response = await fetch(
-        `https://gateway.marvel.com:443/v1/public/characters?offset=${offsetAPICharacters}&limit=20&apikey=${API_KEY}`
+        `https://gateway.marvel.com:443/v1/public/characters?offset=${offsetAPICharacters}?page=${currentPageCharacters}&limit=20&apikey=${API_KEY}`
       );
       const data = await response.json();
       setCharacters(data.data.results);

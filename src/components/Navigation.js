@@ -11,7 +11,7 @@ const Header = styled.header`
   top: 0;
   left: 0;
   z-index: 10;
-  height: 15%;
+  height: 10%;
   font: 400 14px/1.2 "Roboto Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
   color: #202020;
   align-items: center;

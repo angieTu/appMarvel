@@ -7,7 +7,7 @@ import Character from "./components/Character";
 import Comic from "./components/Comic";
 import ComicsContext from "./contexts/ComicsContext";
 import CharactersContext from "./contexts/CharactersContext";
-import ContainerCards from "./components/ContainerCards";
+import ContainerCards from "./pages/ContainerCards";
 
 function App() {
   const { comics } = useContext(ComicsContext);
@@ -18,7 +18,9 @@ function App() {
       <Router>
         <Navigation></Navigation>
         <Switch>
-          <Route exact path="/"></Route>
+          {/* <Route exact path="/">
+            <ContainerCards type="characters" data={characters} />
+          </Route> */}
           <Route exact path="/comics">
             <ContainerCards type="comics" data={comics} />
           </Route>

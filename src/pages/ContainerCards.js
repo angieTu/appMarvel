@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 
-import Container from "./Container";
-import ShortCard from "./ShortCard";
-import Pagination from "./Pagination";
+import Container from "../components/Container";
+import ShortCard from "../components/ShortCard";
+import Pagination from "../components/Pagination";
 
 import ComicsContext from "../contexts/ComicsContext";
 import CharactersContext from "../contexts/CharactersContext";

@@ -3,6 +3,7 @@ import React from "react";
 import Container from "./Container";
 import Image from "./Image";
 import ListItem from "./ListItem";
+import Heading from "./Heading";
 
 const Card = ({ type, src, title, description, series, comics, stories }) => {
   return (
@@ -12,7 +13,7 @@ const Card = ({ type, src, title, description, series, comics, stories }) => {
           <Image src={src} />
         </Container>
         <Container className="details-container">
-          <h1>{title}</h1>
+          <Heading>{title}</Heading>
           <p>{description}</p>
         </Container>
       </Container>

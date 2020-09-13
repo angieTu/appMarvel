@@ -13,7 +13,7 @@ const ComicsProvider = ({ children }) => {
   useEffect(() => {
     const getComics = async () => {
       const response = await fetch(
-        `https://gateway.marvel.com:443/v1/public/comics?offset=${offsetAPIComics}&limit=20&apikey=${API_KEY}`
+        `https://gateway.marvel.com:443/v1/public/comics?offset=${offsetAPIComics}?page=${currentPageComics}&limit=20&apikey=${API_KEY}`
       );
       const data = await response.json();
       setComics(data.data.results);
