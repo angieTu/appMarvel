@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Characters from "./components/Characters";
 import Navigation from "./components/Navigation";
-import Comics from "./components/Comics";
+
 import Character from "./components/Character";
 import Comic from "./components/Comic";
+import ComicsContext from "./contexts/ComicsContext";
+import CharactersContext from "./contexts/CharactersContext";
+import ContainerCards from "./components/ContainerCards";
 
 function App() {
+  const { comics } = useContext(ComicsContext);
+  const { characters } = useContext(CharactersContext);
+
   return (
     <>
       <Router>
         <Navigation></Navigation>
         <Switch>
-          <Route exact path="/" component={Characters}></Route>
-          <Route exact path="/comics" component={Comics}></Route>
-          <Route exact path="/characters" component={Characters}></Route>
+          <Route exact path="/"></Route>
+          <Route exact path="/comics">
+            <ContainerCards type="comics" data={comics} />
+          </Route>
+          <Route exact path="/characters">
+            <ContainerCards type="characters" data={characters} />
+          </Route>
           <Route
             exact
             path="/characters/:characterID"

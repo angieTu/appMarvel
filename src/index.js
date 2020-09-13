@@ -3,9 +3,16 @@ import ReactDOM from "react-dom";
 import "./styles/main.scss";
 import App from "./App";
 
+import { ComicsProvider } from "./contexts/ComicsContext";
+import { CharactersProvider } from "./contexts/CharactersContext";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ComicsProvider>
+      <CharactersProvider>
+        <App />
+      </CharactersProvider>
+    </ComicsProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
