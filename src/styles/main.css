@@ -1,0 +1,115 @@
+.card-container {
+  border-radius: 5px;
+  border: 0px solid #757272;
+  box-shadow: 0px 0px 39px -6px black;
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #151515;
+  color: #fff;
+  padding-bottom: 26px;
+  flex-direction: column; }
+  .card-container .info-container {
+    display: flex;
+    padding-bottom: 20px; }
+    .card-container .info-container .img-container {
+      overflow: hidden;
+      height: 500px; }
+      .card-container .info-container .img-container > img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        transition: 0.2s;
+        object-fit: cover; }
+        .card-container .info-container .img-container > img:hover {
+          transform: scale(1.2); }
+    .card-container .info-container .details-container {
+      text-transform: uppercase;
+      width: 40%;
+      padding: 10px 57px; }
+      .card-container .info-container .details-container > h1 {
+        font-size: 28px; }
+  .card-container .aditional-info-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 40px 0 40px; }
+    .card-container .aditional-info-container .show-info-container {
+      width: 50%;
+      padding: 0 5px 0 5px; }
+      .card-container .aditional-info-container .show-info-container > li {
+        margin-top: 8px; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+.character-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 119px;
+  flex-direction: column;
+  font: 400 14px/1.2 "Roboto Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  color: #202020; }
+
+li {
+  list-style: none; }
+
+.comic-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 119px;
+  flex-direction: column;
+  font: 400 14px/1.2 "Roboto Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  color: #202020; }
+
+.go-back-button {
+  width: 20%;
+  display: inline-block;
+  margin: 10px auto;
+  font: 400 14px/1.2 "Roboto Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  background-color: #e62429;
+  height: 36px;
+  border-radius: 38px 0px; }
+  .go-back-button:hover {
+    background-color: #9f0013; }
+
+.shortCard-container {
+  width: 15%;
+  height: 346px;
+  margin: 27px 24px;
+  transition: 0.3s;
+  overflow: hidden; }
+  .shortCard-container > h1 {
+    font-size: 18px;
+    margin-left: 10px;
+    height: 30%;
+    font-weight: lighter; }
+  .shortCard-container:hover {
+    transform: translateY(-12px); }
+  .shortCard-container .shortCard-img {
+    height: 70%;
+    box-shadow: 0 26px 24px -16px grey;
+    margin: 19px auto;
+    overflow: hidden; }
+    .shortCard-container .shortCard-img > img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+      object-position: top-center;
+      transition: 0.3s; }
+      .shortCard-container .shortCard-img > img:hover {
+        transform: scale(1.2); }
+
+/*# sourceMappingURL=main.css.map */

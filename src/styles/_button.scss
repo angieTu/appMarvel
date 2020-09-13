@@ -1,0 +1,13 @@
+.go-back-button {
+  width: 20%;
+  display: inline-block;
+  margin: 10px auto;
+  font: 400 14px/1.2 "Roboto Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  background-color: #e62429;
+  height: 36px;
+  border-radius: 38px 0px;
+
+  &:hover {
+    background-color: #9f0013;
+  }
+}
