@@ -1,20 +1,14 @@
 .card-container {
-  border-radius: 5px;
-  border: 0px solid #757272;
-  box-shadow: 0px 0px 39px -6px black;
-  width: 70%;
+  width: 90%;
   display: flex;
-  margin: 0 auto;
+  margin: 15px auto;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #151515;
-  color: #fff;
-  padding-bottom: 26px;
+
   flex-direction: column;
 
   .info-container {
     display: flex;
-    padding-bottom: 20px;
 
     .img-container {
       overflow: hidden;
@@ -48,7 +42,7 @@
   .aditional-info-container {
     display: flex;
     flex-direction: row;
-    margin: 0 40px 0 40px;
+    margin: 0 40px 35px 40px;
 
     .show-info-container {
       width: 50%;

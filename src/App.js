@@ -1,12 +1,19 @@
 import React, { useContext } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
-import Navigation from "./components/Navigation";
-
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Character from "./components/Character";
 import Comic from "./components/Comic";
+
 import ComicsContext from "./contexts/ComicsContext";
 import CharactersContext from "./contexts/CharactersContext";
+
 import ContainerCards from "./pages/ContainerCards";
 
 function App() {
@@ -16,11 +23,11 @@ function App() {
   return (
     <>
       <Router>
-        <Navigation></Navigation>
+        <Header />
         <Switch>
-          {/* <Route exact path="/">
-            <ContainerCards type="characters" data={characters} />
-          </Route> */}
+          <Route exact path="/">
+            <Redirect to="/characters" />
+          </Route>
           <Route exact path="/comics">
             <ContainerCards type="comics" data={comics} />
           </Route>
@@ -37,6 +44,7 @@ function App() {
             <h1>Not Found</h1>
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </>
   );

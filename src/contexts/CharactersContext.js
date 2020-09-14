@@ -9,16 +9,20 @@ const CharactersProvider = ({ children }) => {
   const [totalPagesCharacters, setTotalPagesCharacters] = useState(0);
   const [currentPageCharacters, setCurrentPageCharacters] = useState(1);
   const [offsetAPICharacters, setOffsetAPICharacters] = useState(0);
+  const [isLoadingCharacters, setIsLoadingCharacters] = useState(true);
 
   useEffect(() => {
+    setIsLoadingCharacters(true);
     const getCharacters = async () => {
       const response = await fetch(
-        `https://gateway.marvel.com:443/v1/public/characters?offset=${offsetAPICharacters}?page=${currentPageCharacters}&limit=20&apikey=${API_KEY}`
+        `https://gateway.marvel.com:443/v1/public/characters?offset=${offsetAPICharacters}?page=${currentPageCharacters}
+        &limit=20&apikey=${API_KEY}`
       );
       const data = await response.json();
       setCharacters(data.data.results);
       setTotalPagesCharacters(data.data.total);
       setOffsetAPICharacters(data.data.offset);
+      setIsLoadingCharacters(false);
     };
     getCharacters();
   }, [currentPageCharacters]);
@@ -32,6 +36,7 @@ const CharactersProvider = ({ children }) => {
         offsetAPICharacters,
         setOffsetAPICharacters,
         setCurrentPageCharacters,
+        isLoadingCharacters,
       }}
     >
       {children}

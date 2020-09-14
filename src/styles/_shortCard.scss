@@ -1,13 +1,19 @@
 .shortCard-container {
   width: 15%;
-  height: 346px;
-  margin: 27px 24px;
+  height: 450px;
+  margin: 0px 24px;
   transition: 0.3s;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover > h1 {
+    color: #e62429;
+  }
 
   & > h1 {
     font-size: 18px;
-    margin-left: 10px;
     height: 30%;
     font-weight: lighter;
   }
@@ -30,6 +36,7 @@
       object-fit: cover;
       object-position: top-center;
       transition: 0.3s;
+      cursor: pointer;
 
       &:hover {
         transform: scale(1.2);

@@ -4,6 +4,7 @@ import Container from "./Container";
 import Image from "./Image";
 import ListItem from "./ListItem";
 import Heading from "./Heading";
+import Text from "./Text";
 
 const Card = ({ type, src, title, description, series, comics, stories }) => {
   return (
@@ -14,7 +15,7 @@ const Card = ({ type, src, title, description, series, comics, stories }) => {
         </Container>
         <Container className="details-container">
           <Heading>{title}</Heading>
-          <p>{description}</p>
+          <Text>{description ? description : "No description was found"}</Text>
         </Container>
       </Container>
 
@@ -22,7 +23,7 @@ const Card = ({ type, src, title, description, series, comics, stories }) => {
         <Container className="aditional-info-container">
           {series && (
             <Container className="show-info-container">
-              <h2>Series:</h2>
+              <Heading as="h2">Series:</Heading>
               {series.map((serie, index) => (
                 <ListItem key={index}>{serie.name}</ListItem>
               ))}
@@ -31,7 +32,7 @@ const Card = ({ type, src, title, description, series, comics, stories }) => {
 
           {comics && (
             <Container className="show-info-container">
-              <h2>Comics:</h2>
+              <Heading as="h2">Comics:</Heading>
               {comics.map((comic, index) => (
                 <ListItem key={index}>{comic.name}</ListItem>
               ))}
@@ -39,7 +40,7 @@ const Card = ({ type, src, title, description, series, comics, stories }) => {
           )}
           {stories && (
             <Container className="show-info-container">
-              <h2>Stories:</h2>
+              <Heading as="h2">Stories:</Heading>
               {stories.map((story, index) => (
                 <ListItem key={index}>{story.name}</ListItem>
               ))}

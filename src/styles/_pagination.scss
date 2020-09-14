@@ -1,0 +1,22 @@
+.pagination-container {
+  padding-bottom: 40px;
+
+  & button {
+    font: 400 14px/1.2 "Roboto Bold", "Trebuchet MS", Helvetica, Arial,
+      sans-serif;
+    padding: 8px 20px;
+    margin: 0 6px;
+    background-color: #e62429;
+    border: none;
+    border-radius: 38px 0px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: #9f0013;
+    }
+  }
+}

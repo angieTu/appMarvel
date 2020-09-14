@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 10%;
+  font: 400 14px/1.2 "Roboto Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  align-items: center;
+  background-color: #202020;
+
+  & > a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+
+    &.selected {
+      color: #e62429;
+    }
+  }
+}

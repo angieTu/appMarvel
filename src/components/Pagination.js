@@ -1,23 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 
-const PaginationStyled = styled.div`
-  padding-bottom: 40px;
-
-  & button {
-    font: 400 14px/1.2 "Roboto Bold", "Trebuchet MS", Helvetica, Arial,
-      sans-serif;
-    padding: 8px 20px;
-    margin: 0 6px;
-    background-color: #e62429;
-    border: none;
-    border-radius: 38px 0px;
-
-    &:hover {
-      background-color: #9f0013;
-    }
-  }
-`;
+import Container from "./Container";
+import Button from "./Button";
+import Span from "./Span";
 
 const Pagination = ({
   currentPage,
@@ -47,17 +32,17 @@ const Pagination = ({
   };
 
   return (
-    <PaginationStyled>
-      <button onClick={handleFirstPageClick}>First Page</button>
+    <Container className="pagination-container">
+      <Button onClick={handleFirstPageClick}>First Page</Button>
       {currentPage > 1 && (
-        <button onClick={previousPage}> {currentPage - 1}</button>
+        <Button onClick={previousPage}> {currentPage - 1}</Button>
       )}
-      <span>Page: {currentPage}</span>
+      <Span>Page: {currentPage}</Span>
       {currentPage !== Math.round(totalPages / 20) && (
-        <button onClick={nextPage}>{currentPage + 1}</button>
+        <Button onClick={nextPage}>{currentPage + 1}</Button>
       )}
-      <button onClick={handleLastPageClick}>Last Page</button>
-    </PaginationStyled>
+      <Button onClick={handleLastPageClick}>Last Page</Button>
+    </Container>
   );
 };
 

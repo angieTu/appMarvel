@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  background-color: #202020;
+
+  display: flex;
+  flex-direction: column;
+
+  .footer-content {
+    color: white;
+    margin-left: 10px;
+
+    & a {
+      color: red;
+      text-decoration: none;
+    }
+  }
+
+  .contact-details {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 10px;
+    & a {
+      margin: 0 5px 0 5px;
+    }
+
+    .footer-icon {
+      width: 30px;
+      color: red;
+      cursor: pointer;
+      transition: 0.3s;
+      &.github-icon {
+        width: 22px;
+      }
+    }
+  }
+}
