@@ -39,7 +39,7 @@ const ContainerCards = ({ type, data }) => {
 
   return (
     <>
-      {(type === "comics" ? isLoadingComics : isLoadingCharacters) && !data && (
+      {(type === "comics" ? isLoadingComics : isLoadingCharacters) && (
         <Container className="loader">
           <DotLoader
             type="Grid"

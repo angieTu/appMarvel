@@ -7,6 +7,13 @@ import Button from "./Button";
 
 import ScrollToTop from "./ScrollToTop";
 import { DotLoader } from "react-spinners";
+import { css } from "@emotion/core";
+
+const override = css`
+  & div {
+    background-color: red;
+  }
+`;
 
 const Comic = () => {
   const API_KEY = "d18d609c3a5a6880ea2a180434e7b377";
@@ -36,9 +43,15 @@ const Comic = () => {
 
   return (
     <>
-      {isLoading && !comic && (
+      {isLoading && (
         <Container className="loader">
-          <DotLoader type="Grid" color="#00BFFF" height={80} width={80} />
+          <DotLoader
+            type="Grid"
+            color="#00BFFF"
+            height={80}
+            width={80}
+            css={override}
+          />
         </Container>
       )}
       {!isLoading && comic && (
