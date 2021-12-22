@@ -7,6 +7,7 @@ import Heading from "./Heading";
 import Text from "./Text";
 
 const Card = ({ type, src, title, description, series, comics, stories }) => {
+  console.log(comics);
   return (
     <Container as="article" className="card-container">
       <Container className="info-container">
@@ -21,7 +22,7 @@ const Card = ({ type, src, title, description, series, comics, stories }) => {
 
       {type === "character" && (
         <Container className="aditional-info-container">
-          {series && (
+          {series.length > 1 && (
             <Container className="show-info-container">
               <Heading as="h2">Series:</Heading>
               {series.map((serie, index) => (
@@ -30,7 +31,7 @@ const Card = ({ type, src, title, description, series, comics, stories }) => {
             </Container>
           )}
 
-          {comics && (
+          {comics.length > 1 && (
             <Container className="show-info-container">
               <Heading as="h2">Comics:</Heading>
               {comics.map((comic, index) => (
@@ -38,7 +39,7 @@ const Card = ({ type, src, title, description, series, comics, stories }) => {
               ))}
             </Container>
           )}
-          {stories && (
+          {stories.length > 1 && (
             <Container className="show-info-container">
               <Heading as="h2">Stories:</Heading>
               {stories.map((story, index) => (
